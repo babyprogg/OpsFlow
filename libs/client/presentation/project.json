@@ -1,0 +1,19 @@
+{
+  "name": "client-presentation",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/client/presentation/src",
+  "projectType": "library",
+  "tags": ["domain:client", "layer:presentation"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/client/presentation/jest.config.ts"
+      }
+    }
+  }
+}

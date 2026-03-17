@@ -1,0 +1,19 @@
+{
+  "name": "client-infrastructure",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/client/infrastructure/src",
+  "projectType": "library",
+  "tags": ["domain:client", "layer:infrastructure"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/client/infrastructure/jest.config.ts"
+      }
+    }
+  }
+}

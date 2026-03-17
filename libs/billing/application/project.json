@@ -1,0 +1,19 @@
+{
+  "name": "billing-application",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/billing/application/src",
+  "projectType": "library",
+  "tags": ["domain:billing", "layer:application"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/billing/application/jest.config.ts"
+      }
+    }
+  }
+}

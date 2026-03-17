@@ -1,0 +1,19 @@
+{
+  "name": "billing-domain",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/billing/domain/src",
+  "projectType": "library",
+  "tags": ["domain:billing", "layer:domain"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/billing/domain/jest.config.ts"
+      }
+    }
+  }
+}

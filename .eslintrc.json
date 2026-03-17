@@ -1,0 +1,173 @@
+{
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nx"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "type:app",
+                "onlyDependOnLibsWithTags": [
+                  "type:feature",
+                  "type:ui",
+                  "type:data-access",
+                  "type:util"
+                ]
+              },
+              {
+                "sourceTag": "type:feature",
+                "onlyDependOnLibsWithTags": [
+                  "type:ui",
+                  "type:data-access",
+                  "type:util"
+                ]
+              },
+              {
+                "sourceTag": "type:ui",
+                "onlyDependOnLibsWithTags": ["type:util"]
+              },
+              {
+                "sourceTag": "type:data-access",
+                "onlyDependOnLibsWithTags": ["type:util"]
+              },
+              {
+                "sourceTag": "type:util",
+                "onlyDependOnLibsWithTags": ["type:util"]
+              },
+              {
+                "sourceTag": "layer:presentation",
+                "onlyDependOnLibsWithTags": [
+                  "layer:application",
+                  "layer:domain",
+                  "layer:infrastructure",
+                  "type:design-system",
+                  "type:core"
+                ]
+              },
+              {
+                "sourceTag": "layer:application",
+                "onlyDependOnLibsWithTags": [
+                  "layer:domain",
+                  "type:core"
+                ]
+              },
+              {
+                "sourceTag": "layer:domain",
+                "onlyDependOnLibsWithTags": ["layer:domain", "type:core"]
+              },
+              {
+                "sourceTag": "layer:infrastructure",
+                "onlyDependOnLibsWithTags": [
+                  "layer:domain",
+                  "layer:application",
+                  "type:core"
+                ]
+              },
+              {
+                "sourceTag": "type:design-system",
+                "onlyDependOnLibsWithTags": ["type:design-system"]
+              },
+              {
+                "sourceTag": "domain:client",
+                "onlyDependOnLibsWithTags": [
+                  "domain:client",
+                  "domain:shared",
+                  "type:core",
+                  "type:design-system"
+                ]
+              },
+              {
+                "sourceTag": "domain:contracts",
+                "onlyDependOnLibsWithTags": [
+                  "domain:contracts",
+                  "domain:client",
+                  "domain:shared",
+                  "type:core",
+                  "type:design-system"
+                ]
+              },
+              {
+                "sourceTag": "domain:work-orders",
+                "onlyDependOnLibsWithTags": [
+                  "domain:work-orders",
+                  "domain:client",
+                  "domain:contracts",
+                  "domain:inventory",
+                  "domain:shared",
+                  "type:core",
+                  "type:design-system"
+                ]
+              },
+              {
+                "sourceTag": "domain:dispatch",
+                "onlyDependOnLibsWithTags": [
+                  "domain:dispatch",
+                  "domain:work-orders",
+                  "domain:shared",
+                  "type:core",
+                  "type:design-system"
+                ]
+              },
+              {
+                "sourceTag": "domain:inventory",
+                "onlyDependOnLibsWithTags": [
+                  "domain:inventory",
+                  "domain:shared",
+                  "type:core",
+                  "type:design-system"
+                ]
+              },
+              {
+                "sourceTag": "domain:billing",
+                "onlyDependOnLibsWithTags": [
+                  "domain:billing",
+                  "domain:work-orders",
+                  "domain:client",
+                  "domain:shared",
+                  "type:core",
+                  "type:design-system"
+                ]
+              },
+              {
+                "sourceTag": "domain:compliance",
+                "onlyDependOnLibsWithTags": [
+                  "domain:compliance",
+                  "domain:work-orders",
+                  "domain:shared",
+                  "type:core",
+                  "type:design-system"
+                ]
+              },
+              {
+                "sourceTag": "domain:analytics",
+                "onlyDependOnLibsWithTags": [
+                  "domain:analytics",
+                  "domain:shared",
+                  "type:core",
+                  "type:design-system"
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nx/typescript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nx/javascript"],
+      "rules": {}
+    }
+  ]
+}

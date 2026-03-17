@@ -1,0 +1,79 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "rootDir": ".",
+    "sourceMap": true,
+    "declaration": false,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "ES2022",
+    "lib": ["ES2022", "dom"],
+    "skipLibCheck": true,
+    "skipDefaultLibCheck": true,
+    "strict": true,
+    "noImplicitOverride": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "esModuleInterop": true,
+    "baseUrl": ".",
+    "paths": {
+      "@ops-flow/core/auth": ["libs/core/auth/src/index.ts"],
+      "@ops-flow/core/config": ["libs/core/config/src/index.ts"],
+      "@ops-flow/core/error-handling": ["libs/core/error-handling/src/index.ts"],
+      "@ops-flow/core/telemetry": ["libs/core/telemetry/src/index.ts"],
+      "@ops-flow/core/api-client": ["libs/core/api-client/src/index.ts"],
+      "@ops-flow/core/query-cache": ["libs/core/query-cache/src/index.ts"],
+      
+      "@ops-flow/design-system/components": ["libs/design-system/components/src/index.ts"],
+      "@ops-flow/design-system/form-controls": ["libs/design-system/form-controls/src/index.ts"],
+      "@ops-flow/design-system/icons": ["libs/design-system/icons/src/index.ts"],
+      "@ops-flow/design-system/layout": ["libs/design-system/layout/src/index.ts"],
+      "@ops-flow/design-system/tokens": ["libs/design-system/tokens/src/index.ts"],
+      
+      "@ops-flow/client/domain": ["libs/client/domain/src/index.ts"],
+      "@ops-flow/client/application": ["libs/client/application/src/index.ts"],
+      "@ops-flow/client/infrastructure": ["libs/client/infrastructure/src/index.ts"],
+      "@ops-flow/client/presentation": ["libs/client/presentation/src/index.ts"],
+      
+      "@ops-flow/contracts/domain": ["libs/contracts/domain/src/index.ts"],
+      "@ops-flow/contracts/application": ["libs/contracts/application/src/index.ts"],
+      "@ops-flow/contracts/infrastructure": ["libs/contracts/infrastructure/src/index.ts"],
+      "@ops-flow/contracts/presentation": ["libs/contracts/presentation/src/index.ts"],
+      
+      "@ops-flow/work-orders/domain": ["libs/work-orders/domain/src/index.ts"],
+      "@ops-flow/work-orders/application": ["libs/work-orders/application/src/index.ts"],
+      "@ops-flow/work-orders/infrastructure": ["libs/work-orders/infrastructure/src/index.ts"],
+      "@ops-flow/work-orders/presentation": ["libs/work-orders/presentation/src/index.ts"],
+      
+      "@ops-flow/dispatch/domain": ["libs/dispatch/domain/src/index.ts"],
+      "@ops-flow/dispatch/application": ["libs/dispatch/application/src/index.ts"],
+      "@ops-flow/dispatch/infrastructure": ["libs/dispatch/infrastructure/src/index.ts"],
+      "@ops-flow/dispatch/presentation": ["libs/dispatch/presentation/src/index.ts"],
+      
+      "@ops-flow/inventory/domain": ["libs/inventory/domain/src/index.ts"],
+      "@ops-flow/inventory/application": ["libs/inventory/application/src/index.ts"],
+      "@ops-flow/inventory/infrastructure": ["libs/inventory/infrastructure/src/index.ts"],
+      "@ops-flow/inventory/presentation": ["libs/inventory/presentation/src/index.ts"],
+      
+      "@ops-flow/billing/domain": ["libs/billing/domain/src/index.ts"],
+      "@ops-flow/billing/application": ["libs/billing/application/src/index.ts"],
+      "@ops-flow/billing/infrastructure": ["libs/billing/infrastructure/src/index.ts"],
+      "@ops-flow/billing/presentation": ["libs/billing/presentation/src/index.ts"],
+      
+      "@ops-flow/compliance/domain": ["libs/compliance/domain/src/index.ts"],
+      "@ops-flow/compliance/application": ["libs/compliance/application/src/index.ts"],
+      "@ops-flow/compliance/infrastructure": ["libs/compliance/infrastructure/src/index.ts"],
+      "@ops-flow/compliance/presentation": ["libs/compliance/presentation/src/index.ts"],
+      
+      "@ops-flow/analytics/domain": ["libs/analytics/domain/src/index.ts"],
+      "@ops-flow/analytics/application": ["libs/analytics/application/src/index.ts"],
+      "@ops-flow/analytics/infrastructure": ["libs/analytics/infrastructure/src/index.ts"],
+      "@ops-flow/analytics/presentation": ["libs/analytics/presentation/src/index.ts"]
+    }
+  },
+  "exclude": ["node_modules", "tmp"]
+}

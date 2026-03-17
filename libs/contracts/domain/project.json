@@ -1,0 +1,19 @@
+{
+  "name": "contracts-domain",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/contracts/domain/src",
+  "projectType": "library",
+  "tags": ["domain:contracts", "layer:domain"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/contracts/domain/jest.config.ts"
+      }
+    }
+  }
+}

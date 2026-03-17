@@ -1,0 +1,19 @@
+{
+  "name": "dispatch-infrastructure",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/dispatch/infrastructure/src",
+  "projectType": "library",
+  "tags": ["domain:dispatch", "layer:infrastructure"],
+  "targets": {
+    "lint": {
+      "executor": "@nx/eslint:lint"
+    },
+    "test": {
+      "executor": "@nx/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "libs/dispatch/infrastructure/jest.config.ts"
+      }
+    }
+  }
+}

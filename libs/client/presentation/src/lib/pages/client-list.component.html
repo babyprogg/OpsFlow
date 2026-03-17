@@ -1,0 +1,30 @@
+<div class="client-list">
+  <div class="client-list-header">
+    <h2>Clients</h2>
+    <button (click)="onCreateClient()">+ New Client</button>
+  </div>
+
+  @if (store.loading()) {
+    <div class="loading">Loading clients...</div>
+  } @else if (store.error()) {
+    <div class="error">{{ store.error() }}</div>
+  } @else {
+    <div class="client-grid">
+      @for (client of store.activeClients(); track client.id) {
+        <div
+          class="client-card"
+          [class.selected]="store.selectedId() === client.id"
+          (click)="store.selectClient(client.id)">
+          <h3>{{ client.name }}</h3>
+          <p class="client-status" [attr.data-status]="client.status">
+            {{ client.status }}
+          </p>
+          <p class="client-contact">
+            {{ client.primaryContact.firstName }} {{ client.primaryContact.lastName }}
+          </p>
+          <p class="client-email">{{ client.primaryContact.email }}</p>
+        </div>
+      }
+    </div>
+  }
+</div>
