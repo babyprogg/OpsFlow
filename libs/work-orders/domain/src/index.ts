@@ -1,2 +1,3 @@
 ﻿// work-orders domain Layer Public API
-// Export entities, value-objects, ports here
+export { WorkOrder, WorkOrderStatus } from './lib/entities/work-order.entity';
+export { WorkOrderRepository, WorkOrderFilters } from './lib/ports/work-order.repository';

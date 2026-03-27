@@ -1,2 +1,3 @@
 ﻿// work-orders infrastructure Layer Public API
-// Export repositories, mappers, stores here
+export { WorkOrderStore } from './lib/stores/work-order.store';
+export { provideWorkOrderRepositories } from './lib/providers';

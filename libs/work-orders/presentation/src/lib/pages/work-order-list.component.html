@@ -1,0 +1,33 @@
+<div class="work-order-list">
+  <div class="work-order-list-header">
+    <h2>Work Orders</h2>
+    <button (click)="onCreateWorkOrder()">+ New Work Order</button>
+  </div>
+
+  @if (store.loading()) {
+    <div class="loading">Loading work orders...</div>
+  } @else if (store.error()) {
+    <div class="error">{{ store.error() }}</div>
+  } @else {
+    <div class="work-order-grid">
+      @for (workOrder of store.workOrders(); track workOrder.id) {
+        <div
+          class="work-order-card"
+          [class.selected]="store.selectedId() === workOrder.id"
+          (click)="store.selectWorkOrder(workOrder.id)">
+          <h3>{{ workOrder.title }}</h3>
+          <p class="work-order-description">{{ workOrder.description }}</p>
+          <p class="work-order-status" [attr.data-status]="workOrder.status">
+            {{ workOrder.status }}
+          </p>
+          @if (workOrder.assignedTo) {
+            <p class="work-order-assigned">Assigned to: {{ workOrder.assignedTo }}</p>
+          }
+          @if (workOrder.scheduledDate) {
+            <p class="work-order-date">Scheduled: {{ workOrder.scheduledDate | date:'short' }}</p>
+          }
+        </div>
+      }
+    </div>
+  }
+</div>
