@@ -3,12 +3,12 @@ const nxPreset = require('../../../jest.preset.js');
 
 export default {
   ...nxPreset,
-  displayName: 'work-orders-domain',
+  displayName: 'inventory-domain',
   testEnvironment: 'node',
   transform: {
-    '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/../../../tsconfig.spec.json' }]
+    '^.+\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/../../../tsconfig.spec.json' }]
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../../coverage/libs/work-orders/domain',
+  coverageDirectory: '../../../coverage/libs/inventory/domain',
   setupFilesAfterEnv: undefined
 };

@@ -4,6 +4,28 @@
     <button (click)="onCreateWorkOrder()">+ New Work Order</button>
   </div>
 
+  <div class="completion-panel">
+    <h3>Complete work order with parts</h3>
+    <div class="completion-grid">
+      <label>
+        Work order ID
+        <input [(ngModel)]="completionWorkOrderId" name="completionWorkOrderId" type="text" />
+      </label>
+      <label>
+        Stock item ID
+        <input [(ngModel)]="completionStockItemId" name="completionStockItemId" type="text" />
+      </label>
+      <label>
+        Quantity
+        <input [(ngModel)]="completionQuantity" name="completionQuantity" type="number" min="1" />
+      </label>
+    </div>
+    <button class="completion-button" type="button" (click)="completeWithParts()">Complete and consume</button>
+    @if (completionStatus) {
+      <p class="completion-status">{{ completionStatus }}</p>
+    }
+  </div>
+
   @if (store.loading()) {
     <div class="loading">Loading work orders...</div>
   } @else if (store.error()) {

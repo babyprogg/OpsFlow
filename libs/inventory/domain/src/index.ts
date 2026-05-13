@@ -1,2 +1,3 @@
 ﻿// inventory domain Layer Public API
-// Export entities, value-objects, ports here
+export { StockItem, StockMovement, StockMovementType } from './lib/entities/stock-item.entity';
+export { InventoryRepository } from './lib/ports/inventory.repository';

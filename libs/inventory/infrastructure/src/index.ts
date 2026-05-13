@@ -1,2 +1,3 @@
 ﻿// inventory infrastructure Layer Public API
-// Export repositories, mappers, stores here
+export { InMemoryInventoryRepository } from './lib/repositories/in-memory-inventory.repository';
+export { provideInventoryRepositories } from './lib/providers';

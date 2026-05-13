@@ -2,6 +2,56 @@
   padding: 2rem;
 }
 
+.completion-panel {
+  margin: 0 0 2rem 0;
+  padding: 1.25rem;
+  background: linear-gradient(180deg, #f8fafc 0%, #eef2ff 100%);
+  border: 1px solid #cbd5e1;
+  border-radius: 16px;
+}
+
+.completion-panel h3 {
+  margin: 0 0 1rem 0;
+}
+
+.completion-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin-bottom: 1rem;
+}
+
+.completion-grid label {
+  display: grid;
+  gap: 0.35rem;
+  font-size: 0.875rem;
+  color: #334155;
+}
+
+.completion-grid input {
+  padding: 0.65rem 0.8rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+}
+
+.completion-button {
+  padding: 0.65rem 1rem;
+  background: #0f766e;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.completion-button:hover {
+  background: #115e59;
+}
+
+.completion-status {
+  margin: 0.85rem 0 0;
+  color: #0f172a;
+}
+
 .work-order-list-header {
   display: flex;
   justify-content: space-between;

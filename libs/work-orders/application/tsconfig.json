@@ -1,0 +1,15 @@
+{
+  "extends": "../../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "../../../",
+    "paths": {
+      "@ops-flow/work-orders/domain": ["libs/work-orders/domain/src/index.ts"],
+      "@ops-flow/inventory/domain": ["libs/inventory/domain/src/index.ts"]
+    },
+    "outDir": "../../../dist/out-tsc",
+    "types": ["node"]
+  },
+  "files": [],
+  "include": ["src/**/*.ts"],
+  "exclude": ["src/**/*.spec.ts", "src/**/*.test.ts"]
+}
