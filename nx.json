@@ -32,8 +32,7 @@
       ]
     }
   },
-  "plugins": [
-  ],
+  "plugins": [],
   "generators": {
     "@nx/angular:application": {
       "style": "scss",
@@ -49,5 +48,6 @@
     "@nx/angular:component": {
       "style": "scss"
     }
-  }
+  },
+  "analytics": true
 }

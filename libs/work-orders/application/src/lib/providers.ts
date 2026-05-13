@@ -12,9 +12,8 @@ export function provideWorkOrderUseCases(): Provider[] {
   return [
     {
       provide: CreateWorkOrderUseCase,
-      useFactory: (workOrderRepository: WorkOrderRepository) =>
-        new CreateWorkOrderUseCase(workOrderRepository),
-      deps: [WorkOrderRepository],
+      useFactory: () => new CreateWorkOrderUseCase(),
+      deps: [],
     },
     {
       provide: CompleteWorkOrderAndConsumePartsUseCase,
@@ -26,21 +25,18 @@ export function provideWorkOrderUseCases(): Provider[] {
     },
     {
       provide: GetWorkOrderUseCase,
-      useFactory: (workOrderRepository: WorkOrderRepository) =>
-        new GetWorkOrderUseCase(workOrderRepository),
-      deps: [WorkOrderRepository],
+      useFactory: () => new GetWorkOrderUseCase(),
+      deps: [],
     },
     {
       provide: ListWorkOrdersUseCase,
-      useFactory: (workOrderRepository: WorkOrderRepository) =>
-        new ListWorkOrdersUseCase(workOrderRepository),
-      deps: [WorkOrderRepository],
+      useFactory: () => new ListWorkOrdersUseCase(),
+      deps: [],
     },
     {
       provide: UpdateWorkOrderStatusUseCase,
-      useFactory: (workOrderRepository: WorkOrderRepository) =>
-        new UpdateWorkOrderStatusUseCase(workOrderRepository),
-      deps: [WorkOrderRepository],
+      useFactory: () => new UpdateWorkOrderStatusUseCase(),
+      deps: [],
     },
   ];
 }
