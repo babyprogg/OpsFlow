@@ -1,5 +1,5 @@
 /* eslint-disable */
-import nxPreset from '../../../jest.preset.js';
+const nxPreset = require('../../../jest.preset.js');
 
 export default {
   ...nxPreset,
